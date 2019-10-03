@@ -1,0 +1,15 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  let size=50;
+  for (let row=0; row<=10; row++) {
+  //creates row
+  for (let col=0; col<=10; col++) {
+    square (row*50, col*50, size);
+    
+    }
+  }
+}
