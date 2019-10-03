@@ -1,15 +1,23 @@
+let boardspace = 600
+let squares = 7
+let red = "#ff0000"
+let black = "#000000"
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(boardspace, boardspace);
 }
 
 function draw() {
   background(220);
-  let size=50;
-  for (let row=0; row<=10; row++) {
+  let size=75;
+  for (let row=0; row<=squares; row++) {
   //creates row
-  for (let col=0; col<=10; col++) {
-    square (row*50, col*50, size);
-    
+  for (let col=0; col<=squares; col++) {
+    if ((row+col)%2===1) {
+      fill (black);
+    } else {
+      fill (red); }
+    square (row*size, col*size, size);
     }
   }
 }
