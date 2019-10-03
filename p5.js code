@@ -1,0 +1,23 @@
+let boardSize = 400;
+let sqCount = 8;
+let color1 = 'black';
+let color2 = 'red';
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  let size = 30;
+  for (let row = 1; row <= 10; row++) {
+    //creates row
+    for (let col = 1; col <= 10; col++) {
+    //fill(color2);
+      
+      square(col*size,row*size,size);
+      text(row+col, col*size+size/2, row*size+size/2);
+    }
+  }
+}
+//if statement needed for on if the nunmbers add up to either an odd or even number.
